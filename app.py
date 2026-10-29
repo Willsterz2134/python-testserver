@@ -1,23 +1,33 @@
-lask import Flask, request
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    ip = request.remote_addr or "Ukendt"
-
-    return f"""
+    return """
     <!doctype html>
     <html lang="da">
     <head>
         <meta charset="utf-8">
-        <title>IP-test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Frivillig IP-test</title>
     </head>
-    <body>
+    <body style="font-family: Arial; max-width: 600px; margin: 40px auto; padding: 15px;">
         <h1>Frivillig IP-test</h1>
-        <p>Din offentlige IP-adresse, som serveren ser den, er:</p>
-        <h2>{ip}</h2>
-        <p>Besøg kun siden, hvis du accepterer, at IP-adressen vises.</p>
+
+        <p>
+            Tryk på knappen for selv at se din offentlige IP-adresse
+            og det omtrentlige område. Området kan være upræcist.
+        </p>
+
+        <a href="https://ipinfo.io/" target="_blank" rel="noopener noreferrer">
+            <button style="padding: 12px 18px; cursor: pointer;">
+                Se min IP og omtrentlige placering
+            </button>
+        </a>
+
+        <p>Du vælger selv, om du vil dele resultatet.</p>
     </body>
     </html>
     """
+
