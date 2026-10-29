@@ -31,6 +31,7 @@ def share():
     ip = forwarded.split(",")[0].strip() if forwarded else request.remote_addr
 
     app.logger.info("Frivilligt delt IP: %s", ip)
+    print("TEST: share-funktionen blev kørt", flush=True)
 
     return """
     <!doctype html>
