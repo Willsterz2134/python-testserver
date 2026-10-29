@@ -1,8 +1,25 @@
-       Jeg accepterer og deler min IP
+from flask import Flask, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return """
+    <!doctype html>
+    <html lang="da">
+    <head>
+        <meta charset="utf-8">
+        <title>Frivillig IP-test</title>
+    </head>
+    <body style="font-family: Arial; margin: 40px;">
+        <h1>Frivillig IP-test</h1>
+        <p>Tryk kun, hvis du accepterer at dele din IP med hjemmesidens ejer.</p>
+        <form action="/share" method="post">
+            <button type="submit">
+                Jeg accepterer og deler min IP
             </button>
         </form>
-
-        <p>Du vælger selv, om du vil dele din IP.</p>
     </body>
     </html>
     """
@@ -18,10 +35,7 @@ def share():
     return """
     <!doctype html>
     <html lang="da">
-    <head>
-        <meta charset="utf-8">
-        <title>Tak</title>
-    </head>
+    <head><meta charset="utf-8"><title>Tak</title></head>
     <body style="font-family: Arial; margin: 40px;">
         <h1>Tak!</h1>
         <p>Din IP er sendt til serveren.</p>
@@ -29,7 +43,3 @@ def share():
     </body>
     </html>
     """
-
-
-if __name__ == "__main__":
-    app.run(debug=False)
