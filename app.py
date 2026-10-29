@@ -23,12 +23,10 @@ def home():
         background-repeat: no-repeat;
         background-attachment: fixed;
     ">
-        <h1>Frivillig IP-test</h1>
+        <h1>IQ test 10 sprøgslåm</h1>
 
         <p>
-            Tryk kun på knappen, hvis du accepterer,
-            at hjemmesidens ejer kan se din IP-adresse
-            i serverens logs.
+            Tryk på knappen for at  starte.
         </p>
 
         <form action="/share" method="post">
@@ -37,7 +35,7 @@ def home():
                 font-size: 16px;
                 cursor: pointer;
             ">
-                Jeg accepterer og deler min IP
+                Jeg accepterer betingelserne
             </button>
         </form>
     </body>
@@ -68,7 +66,7 @@ def share():
     </head>
 
     <body style="font-family: Arial, sans-serif; margin: 40px;">
-        <h1>Tak!</h1>
+        <h1>Tak! for din ip-</h1>
 
         <p>
             Din IP-adresse er blevet behandlet af serveren.
