@@ -1,21 +1,23 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return """
+    ip = request.remote_addr or "Ukendt"
+
+    return f"""
     <!doctype html>
     <html lang="da">
     <head>
         <meta charset="utf-8">
-        <title>Min testside</title>
+        <title>IP-test</title>
     </head>
     <body>
-        <h1>Min testside virker!</h1>
-        <p>Dette er en frivillig testside.</p>
-        <p>Besøgsoplysninger kan blive behandlet af serveren.
-        Fortsæt kun, hvis du accepterer det.</p>
+        <h1>Frivillig IP-test</h1>
+        <p>Din offentlige IP-adresse, som serveren ser den, er:</p>
+        <h2>{ip}</h2>
+        <p>Besøg kun siden, hvis du accepterer, at IP-adressen vises.</p>
     </body>
     </html>
     """
