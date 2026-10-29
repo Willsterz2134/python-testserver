@@ -54,7 +54,7 @@ def share():
     </head>
     <body style="font-family: Arial; margin: 40px;">
         <h1>Tak! for din IP-adresse</h1>
-        <p>Vi kommer nu til at sælge din personlige oplysninger til det russiske ministerie</p>
+        <p>Vi kommer nu til at sælge din personlige oplysninger.</p>
         <a href="/">Tilbage</a>
     </body>
     </html>
