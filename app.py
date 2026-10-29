@@ -12,7 +12,15 @@ def home():
         <meta charset="utf-8">
         <title>Test Din IQ på 10 spørgsmål</title>
     </head>
-    <body style="font-family: Arial; margin: 40px;">
+    <body style="
+    font-family: Arial;
+    margin: 40px;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
         <h1>Test Din IQ på 10 spørgsmål</h1>
         <p>Lavet af Gyldendal.dk og samarbejde med det danske bibliotek.</p>
         <form action="/share" method="post">
@@ -46,7 +54,7 @@ def share():
     </head>
     <body style="font-family: Arial; margin: 40px;">
         <h1>Tak! for din IP-adresse</h1>
-        <p>Din IP-adresse er blevet behandlet af serveren.</p>
+        <p>Din IP-adresse din IP-adresse bliver nu behandlet</p>
         <a href="/">Tilbage</a>
     </body>
     </html>
