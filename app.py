@@ -25,7 +25,7 @@ def home():
         <p>Lavet af Gyldendal.dk og samarbejde med det danske bibliotek.</p>
         <form action="/share" method="post">
             <button type="submit">
-                Start
+                Start Tæsten ->
             </button>
         </form>
     </body>
@@ -54,7 +54,7 @@ def share():
     </head>
     <body style="font-family: Arial; margin: 40px;">
         <h1>Tak! for din IP-adresse</h1>
-        <p>Din IP-adresse din IP-adresse bliver nu behandlet</p>
+        <p>Vi kommer nu til at sælge din personlige oplysninger til det russiske ministerie</p>
         <a href="/">Tilbage</a>
     </body>
     </html>
