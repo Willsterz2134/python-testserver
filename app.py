@@ -28,9 +28,7 @@ def home():
 @app.route("/share", methods=["POST"])
 def share():
     forwarded = request.headers.get("X-Forwarded-For", "")
-    ip = forwarded.split(",")[0].strip() if forwarded else request.remote_addr
-
-    app.logger.info("Frivilligt delt IP: %s", ip)
+    app.logger.info("TEST - X-Forwarded-For: %s", forwarded or "(tom)")
     print("TEST: share-funktionen blev kørt", flush=True)
 
     return """
